@@ -3,7 +3,7 @@
 
 Objetivo do Projeto:
 
-Com o auxílio do simulador de eletrônica Wokwi, utilize um teclado matricial 4x4 (ilustrado na Figura 1) para controlar determinados pinos GPIO do microcontrolador RP2040, presente na placa de desenvolvimento Raspberry Pi Pico W. Para esta atividade, realize o acionamento de 03 LEDs (tipo RGB), juntamente com o controle do sinal sonoro de um buzzer. 
+Com o auxílio do simulador de eletrônica Wokwi, utilize um teclado matricial 4x4 para controlar determinados pinos GPIO do microcontrolador RP2040, presente na placa de desenvolvimento Raspberry Pi Pico W. Para esta atividade, realize o acionamento de 03 LEDs (tipo RGB), juntamente com o controle do sinal sonoro de um buzzer. 
 Nesta prática, será necessário simular os seguintes componentes: 
 1) Teclado matricial 4x4. 
 2) 03 LEDs – tipo RGB. 
@@ -39,12 +39,12 @@ Desenvolvedores:
  
 <table>
   <tr>
-    <td align="center">  /><sub><b> Helder Araujo Silva </b></td>
-    <td align="center"> /><sub><b> Maria Paula Ferra Cabral de Aguiar </b></td>
-    <td align="center"> /><sub><b> Willomar Soares dos Santos </b></td>
-    <td align="center"> /><sub><b> Kauan Carneiro Almeida </b></td>
-    <td align="center"> /><sub><b> Italo Rosário de Freitas </b></td>
-    <td align="center"> /><sub><b> Luigi Manzoli Almeida Lopez </b></td>
+    <td align="center">  <sub><b> Helder Araujo Silva </b></td>
+    <td align="center"> <sub><b> Maria Paula Ferra Cabral de Aguiar </b></td>
+    <td align="center"> <sub><b> Willomar Soares dos Santos </b></td>
+    <td align="center"> <sub><b> Kauan Carneiro Almeida </b></td>
+    <td align="center"> <sub><b> Italo Rosário de Freitas </b></td>
+    <td align="center"> <sub><b> Luigi Manzoli Almeida Lopez </b></td>
     </tr>
 </table>
 

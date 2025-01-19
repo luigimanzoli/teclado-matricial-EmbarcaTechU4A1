@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "Helder Araujo Silva",
+  "author": "Luigi Manzoli Almeida Lopez",
   "editor": "wokwi",
   "parts": [
     {
@@ -81,14 +81,14 @@
     [ "keypad1:C2", "pico:GP6", "gray", [ "v0" ] ],
     [ "keypad1:C3", "pico:GP7", "gray", [ "v0" ] ],
     [ "keypad1:C4", "pico:GP8", "gray", [ "v0" ] ],
-    [ "bz1:1", "pico:GP28", "black", [ "v0" ] ],
-    [ "bz1:2", "pico:GND.7", "red", [ "v0" ] ],
     [ "led3:C", "led2:C", "black", [ "v0", "h-18.8", "v57.6" ] ],
     [ "led2:C", "led1:C", "black", [ "v0", "h-18.8", "v57.6" ] ],
     [ "led1:C", "pico:GND.4", "black", [ "v19.2", "h230.8", "v-48" ] ],
     [ "r3:2", "pico:GP11", "red", [ "v0" ] ],
     [ "r2:2", "pico:GP12", "green", [ "v0" ] ],
-    [ "r1:2", "pico:GP13", "blue", [ "v0" ] ]
+    [ "r1:2", "pico:GP13", "blue", [ "v0" ] ],
+    [ "bz1:1", "pico:GND.7", "black", [ "v0" ] ],
+    [ "bz1:2", "pico:GP28", "red", [ "v0" ] ]
   ],
   "dependencies": {}
 }

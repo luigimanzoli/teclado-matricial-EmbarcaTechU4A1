@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-
 #define R1 1
 #define R2 2
 #define R3 3
@@ -17,7 +16,6 @@
 
 #define BUZZER 28
 
-// Inicializa os pinos dos LEDs
 void init_led() {
     gpio_init(RLED_PIN);
     gpio_set_dir(RLED_PIN, GPIO_OUT);
@@ -30,6 +28,9 @@ void init_led() {
     gpio_init(BLED_PIN);
     gpio_set_dir(BLED_PIN, GPIO_OUT);
     gpio_put(BLED_PIN, 0);
+
+    gpio_init(BUZZER);
+    gpio_set_dir(BUZZER, GPIO_OUT);
 }
 
 void get_led(bool R, bool G, bool B) {
@@ -77,27 +78,44 @@ char leitura_teclado() {
     return 0;
 }
 
-
 int main() {
     stdio_init_all();
     init_teclado();
     init_led();
 
     while (1) {
+
         char key = leitura_teclado();
 
         if (key == 0){
           printf("Tecle algo!\n");
         }
         else if (key) {
-
           printf("Tecla pressionada: %c\n", key);
-
-          if (key == 'A'){
+          if (key == '1' || key == '4' || key == '7' || key == '*'){
             get_led(1,0,0);
+            sleep_ms(200);
+            get_led(0,0,0);
+          }
+          else if (key == '2' || key == '5' || key == '8' || key == '0'){
+            get_led(0,1,0);
+            sleep_ms(200);
+            get_led(0,0,0);
+          }
+          else if (key == '3' || key == '6' || key == '9' || key == '#'){
+            get_led(0,0,1);
+            sleep_ms(200);
+            get_led(0,0,0);
+          }
+          else if (key == 'A' || key == 'C' || key == 'D'){
+            get_led(1,1,1);
+            sleep_ms(200);
+            get_led(0,0,0);
           }
           else if (key == 'B'){
-            get_led(0,1,0);
+            gpio_put(BUZZER, 1);
+            sleep_ms(200);
+            gpio_put(BUZZER, 0);
           }
         }
         sleep_ms(100);

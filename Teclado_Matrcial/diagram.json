@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "author": "Kauan Carneiro",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -26.4,
+      "left": 174.6,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -395.6,
+      "left": -359.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 133.4,
+      "left": -210.9,
+      "rotate": 270,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 176.75,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 157.55,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 138.35,
+      "left": -134.4,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.6", "bz1:1", "red", [ "h0" ] ],
+    [ "bz1:2", "pico:GP21", "black", [ "v0" ] ],
+    [ "keypad1:C4", "pico:GP9", "green", [ "v0" ] ],
+    [ "keypad1:C3", "pico:GP8", "green", [ "v0" ] ],
+    [ "keypad1:C2", "pico:GP7", "green", [ "v0" ] ],
+    [ "keypad1:C1", "pico:GP6", "green", [ "v0" ] ],
+    [ "keypad1:R4", "pico:GP5", "green", [ "v0" ] ],
+    [ "keypad1:R3", "pico:GP4", "green", [ "v0" ] ],
+    [ "keypad1:R2", "pico:GP3", "green", [ "v0" ] ],
+    [ "keypad1:R1", "pico:GP2", "green", [ "v0" ] ],
+    [ "rgb1:COM", "pico:GND.4", "black", [ "v-0.1", "h168.85" ] ],
+    [ "rgb1:B", "r3:1", "blue", [ "h0" ] ],
+    [ "r3:2", "pico:GP12", "blue", [ "v0" ] ],
+    [ "rgb1:G", "r2:1", "green", [ "v0" ] ],
+    [ "r2:2", "pico:GP11", "green", [ "h8.4", "v-15.95" ] ],
+    [ "rgb1:R", "r1:1", "red", [ "v0" ] ],
+    [ "r1:2", "pico:GP13", "red", [ "h66", "v0", "h15.65" ] ]
+  ],
+  "dependencies": {}
+}

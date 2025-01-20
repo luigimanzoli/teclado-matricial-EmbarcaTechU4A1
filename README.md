@@ -45,6 +45,7 @@ Desenvolvedores:
     <td align="center"> <sub><b> Kauan Carneiro Almeida </b></td>
     <td align="center"> <sub><b> Italo Rosário de Freitas </b></td>
     <td align="center"> <sub><b> Luigi Manzoli Almeida Lopez </b></td>
+    <td align="center"> <sub><b> Vander Luis Barbosa da Silva </b></td>
     </tr>
 </table>
 
